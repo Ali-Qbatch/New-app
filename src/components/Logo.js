@@ -14,8 +14,12 @@ const styles = StyleSheet.create({
   logo: {
     width: 250,
     marginTop: 120,
-    marginLeft: 20
+    marginLeft: 40
   },
+  paragraph: {
+    width: 50,
+    fontSize: 19
+  }
 });
 
 export default Logo

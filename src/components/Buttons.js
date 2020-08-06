@@ -3,11 +3,11 @@ import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, Alert } from 'r
 import styled from 'styled-components';
 const Button = styled.Text`
       background-color:#000;
-      padding:15px;
+      padding:17px;
       color:#fff;
-      width:70%;
+      width:80%;
       margin: 0 auto;
-      fontWeight:600;
+      fontWeight:800;
       textAlign:center;
       marginTop:50px;
       overflow:hidden;
@@ -17,7 +17,7 @@ const Button = styled.Text`
 function Buttons(props) {
   return (
     <SafeAreaView>
-      <Button >
+      <Button onPress={props.onPress}>
         {props.name}
       </Button>
     </SafeAreaView>
