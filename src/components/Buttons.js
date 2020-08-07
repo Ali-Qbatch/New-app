@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, Alert } from 'react-native';
 import styled from 'styled-components';
 const Button = styled.Text`
       background-color:#000;
@@ -16,11 +15,10 @@ const Button = styled.Text`
         `;
 function Buttons(props) {
   return (
-    <SafeAreaView>
-      <Button onPress={props.onPress}>
-        {props.name}
-      </Button>
-    </SafeAreaView>
+
+    <Button onPress={props.onPress}>
+      {props.name}
+    </Button>
   )
 }
 

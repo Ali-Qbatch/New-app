@@ -16,10 +16,7 @@ const styles = StyleSheet.create({
     marginTop: 120,
     marginLeft: 40
   },
-  paragraph: {
-    width: 50,
-    fontSize: 19
-  }
+
 });
 
 export default Logo

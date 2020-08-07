@@ -21,7 +21,8 @@ function SignIn({ navigation }) {
         <Inputs placeholder="Password" />
         <Text onPress={() =>
           navigation.navigate('ForgetPassword', { name: 'ForgetPassword' })} style={styles.forgetPassword}>{forgetPassword}</Text>
-        <Buttons name="Log In" />
+        <Buttons name="Log In" onPress={() =>
+          navigation.navigate('Home', { name: 'Home' })} />
         <View style={{ display: "flex", flexDirection: 'row', justifyContent: "center" }}>
           <Text style={styles.Account}>{havingAccount}</Text>
           <Text style={styles.signUp} onPress={() =>

@@ -30,5 +30,6 @@ const styles = StyleSheet.create({
     marginTop: 250,
     color: "#000"
   },
+
 });
 export default ForgetPassword

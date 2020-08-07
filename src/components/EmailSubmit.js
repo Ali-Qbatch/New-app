@@ -14,7 +14,9 @@ function EmailSubmit({ navigation }) {
       <Text style={styles.paragraph}>
         {Detail}
       </Text>
-      <Buttons name="Continue Login" />
+      <Buttons name="Continue Login" onPress={() =>
+        navigation.navigate('SignIn', { name: 'SignIn' })
+      } />
     </SafeAreaView>
   )
 }
