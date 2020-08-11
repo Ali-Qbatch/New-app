@@ -1,0 +1,19 @@
+ <View style={{ margin: 20 }}>
+      <View style={{ display: "flex", flexDirection: "row", justifyContent: 'center', marginTop: 20 }}>
+        <View style={{ display: "flex", flexDirection: "row" }}>
+          <TextInput placeholder="Search Item" style={styles.searchInput}>
+
+          </TextInput>
+          <Icon style={styles.searchIcon} name="search">
+
+          </Icon>
+        </View>
+
+        <Text style={styles.menuView} >
+          <Icon style={styles.menuIcon} name="bars"></Icon>
+        </Text>
+      </View>
+      <Text style={styles.heading}>
+        Super Discount Detail
+    </Text>
+    </View>

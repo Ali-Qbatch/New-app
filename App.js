@@ -8,9 +8,11 @@ import EmailSubmit from './src/components/EmailSubmit';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Onboard from './src/components/Onboard';
-import { View } from 'react-native'
+import NavigateScreen from './src/components/NavigateScreen'
+
 const App: () => React$Node = () => {
   const Stack = createStackNavigator();
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -31,9 +33,9 @@ const App: () => React$Node = () => {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
         <Stack.Screen name="EmailSubmit" component={EmailSubmit} />
+        <Stack.Screen name="NavigationScreen" component={NavigateScreen} />
       </Stack.Navigator>
-
-    </NavigationContainer >
+    </NavigationContainer>
 
   );
 };

@@ -11,7 +11,8 @@ const Button = styled.Text`
       marginTop:50px;
       overflow:hidden;
       fontSize:16px;
-         borderRadius: 25px
+         borderRadius: 25px;
+
         `;
 function Buttons(props) {
   return (

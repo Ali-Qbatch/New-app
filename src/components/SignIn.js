@@ -4,6 +4,7 @@ import Logo from './Logo'
 import Inputs from './Inputs';
 import Buttons from "./Buttons"
 import styled from 'styled-components';
+import NavigationScreen from './NavigateScreen'
 function SignIn({ navigation }) {
   const Container = styled.View`
     margin:15px
@@ -22,7 +23,7 @@ function SignIn({ navigation }) {
         <Text onPress={() =>
           navigation.navigate('ForgetPassword', { name: 'ForgetPassword' })} style={styles.forgetPassword}>{forgetPassword}</Text>
         <Buttons name="Log In" onPress={() =>
-          navigation.navigate('Home', { name: 'Home' })} />
+          navigation.navigate('NavigationScreen', { name: 'NavigationScreen' })} />
         <View style={{ display: "flex", flexDirection: 'row', justifyContent: "center" }}>
           <Text style={styles.Account}>{havingAccount}</Text>
           <Text style={styles.signUp} onPress={() =>
@@ -42,7 +43,8 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "bold",
     padding: 15,
-    color: "#000"
+    color: "#000",
+    fontFamily: "Avenir-Book"
   },
   forgetPassword: {
     display: "flex",

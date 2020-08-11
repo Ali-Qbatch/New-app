@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Logo from "./Logo"
 import Inputs from "./Inputs"
 import Buttons from "./Buttons"
+import Icon from 'react-native-vector-icons/FontAwesome';
+Icon.loadFont();
 function SignUp({ navigation }) {
   const Container = styled.View`
     margin:15px
@@ -34,6 +36,14 @@ function SignUp({ navigation }) {
         <Text style={{ textAlign: "center", marginTop: 10 }}>
           {Connect}
         </Text>
+        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: "center" }}>
+          <Icon style={styles.facebook} name="facebook" ></Icon>
+          <Icon style={styles.Icon} name="twitter">
+          </Icon>
+          <Icon style={styles.Icon} name="envelope">
+
+          </Icon>
+        </View>
       </Container>
     </SafeAreaView>
   )
@@ -43,7 +53,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "bold",
     padding: 15,
-    color: "#000"
+    color: "#000",
   },
   Account: {
     fontSize: 12,
@@ -58,5 +68,31 @@ const styles = StyleSheet.create({
     paddingRight: 8,
     marginTop: 7.5
   },
+  Icon: {
+    margin: 9,
+    backgroundColor: "#000",
+    borderRadius: 24,
+    overflow: "hidden",
+    paddingLeft: 12,
+    paddingTop: 10,
+    borderWidth: 1,
+    color: '#fff',
+    fontSize: 24,
+    width: 50,
+    height: 50
+  },
+  facebook: {
+    margin: 10,
+    backgroundColor: "#000",
+    borderRadius: 25,
+    overflow: "hidden",
+    borderWidth: 1,
+    color: '#fff',
+    fontSize: 24,
+    width: 50,
+    height: 50,
+    paddingLeft: 15,
+    paddingTop: 12,
+  }
 })
 export default SignUp
