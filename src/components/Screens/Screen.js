@@ -236,7 +236,7 @@ function App() {
               navigation.navigate('SignUp', { name: 'SignUp' })} />),
 
         }}
-        component={() => navigation.goBack()} />
+        component={SignIn} />
 
     </ Drawer.Navigator>
   );

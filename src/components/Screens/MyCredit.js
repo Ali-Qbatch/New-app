@@ -1,124 +1,197 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, ViewBase } from 'react-native';
 import { Button } from 'react-native-paper';
 import Buttons from '../Buttons'
 export class Mycredit extends Component {
   render() {
     return (
-      <SafeAreaView style={{ backgroundColor: '#fff' }}>
+      <SafeAreaView style={styles.SafeAreaView}>
         <ScrollView>
           <View style={styles.Credit}>
             <Text style={styles.Price}>
               $ 95
+
             </Text>
+            <Text style={styles.priceCredit}>
+              Available Credit
+              </Text>
           </View>
+          <Text style={styles.creditUsed}>
+            Details of Credit Used:
+        </Text>
           <View style={styles.listRow}>
-            <View style={{ padding: 10, backgroundColor: '#ccc' }}>
-              <Image style={{ width: 50, height: 50 }} source={require('../../Assets/mobile.png')}></Image>
+            <View style={styles.ImageView}>
+              <Image style={styles.Image} source={require('../../Assets/mobile.png')}></Image>
             </View>
-            <View style={{ padding: 20 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                Grasser
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                Easy to trim grass
-          </Text>
-            </View>
-            <View style={{ padding: 20, paddingLeft: 50 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                $ 200
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                per item
-          </Text>
-            </View>
-          </View>
-          <View style={styles.listRow}>
-            <View style={{ padding: 10, backgroundColor: '#ccc' }}>
-              <Image style={{ width: 50, height: 50 }} source={require('../../Assets/mobile.png')}></Image>
-            </View>
-            <View style={{ padding: 20 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                Grasser
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                Easy to trim grass
-          </Text>
-            </View>
-            <View style={{ padding: 20, paddingLeft: 50 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                $ 200
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                per item
-          </Text>
-            </View>
-          </View>
-          <View style={styles.listRow}>
-            <View style={{ padding: 10, backgroundColor: '#ccc' }}>
-              <Image style={{ width: 50, height: 50 }} source={require('../../Assets/mobile.png')}></Image>
-            </View>
-            <View style={{ padding: 20 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                Grasser
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                Easy to trim grass
-          </Text>
-            </View>
-            <View style={{ padding: 20, paddingLeft: 50 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                $ 200
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                per item
-          </Text>
+            <View style={styles.TextView}>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    Grasser
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Easy to trim grass
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    $200
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Creadit Used
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+
             </View>
           </View>
           <View style={styles.listRow}>
-            <View style={{ padding: 10, backgroundColor: '#ccc' }}>
-              <Image style={{ width: 50, height: 50 }} source={require('../../Assets/mobile.png')}></Image>
+            <View style={styles.ImageView}>
+              <Image style={styles.Image} source={require('../../Assets/mobile.png')}></Image>
             </View>
-            <View style={{ padding: 20 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                Grasser
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                Easy to trim grass
-          </Text>
-            </View>
-            <View style={{ padding: 20, paddingLeft: 50 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                $ 200
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                per item
-          </Text>
+            <View style={styles.TextView}>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    Grasser
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Easy to trim grass
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    $200
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Creadit Used
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+
             </View>
           </View>
           <View style={styles.listRow}>
-            <View style={{ padding: 10, backgroundColor: '#ccc' }}>
-              <Image style={{ width: 50, height: 50 }} source={require('../../Assets/mobile.png')}></Image>
+            <View style={styles.ImageView}>
+              <Image style={styles.Image} source={require('../../Assets/mobile.png')}></Image>
             </View>
-            <View style={{ padding: 20 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                Grasser
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                Easy to trim grass
-          </Text>
+            <View style={styles.TextView}>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    Grasser
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Easy to trim grass
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    $200
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Creadit Used
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+
             </View>
-            <View style={{ padding: 20, paddingLeft: 50 }}>
-              <Text style={{ fontWeight: '600', fontSize: 16 }}>
-                $ 200
-          </Text>
-              <Text style={{ fontSize: 11, marginTop: 8 }}>
-                per item
-          </Text>
+          </View>
+          <View style={styles.listRow}>
+            <View style={styles.ImageView}>
+              <Image style={styles.Image} source={require('../../Assets/mobile.png')}></Image>
+            </View>
+            <View style={styles.TextView}>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    Grasser
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Easy to trim grass
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    $200
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Creadit Used
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+
+            </View>
+          </View>
+          <View style={styles.listRow}>
+            <View style={styles.ImageView}>
+              <Image style={styles.Image} source={require('../../Assets/mobile.png')}></Image>
+            </View>
+            <View style={styles.TextView}>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    Grasser
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Easy to trim grass
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+              <View styles={styles.priceDetail}>
+                <View>
+                  <Text style={styles.BoldFont}>
+                    $200
+              </Text>
+                  <Text style={styles.smallFont}>
+                    Creadit Used
+              </Text>
+                </View>
+                <View>
+
+                </View>
+              </View>
+
             </View>
           </View>
 
-          <Buttons name="Hello" />
+          <Buttons name="Go to My Reservations" onPress={() =>
+            this.props.navigation.navigate('Reservation', { name: 'Reservation' })} />
         </ScrollView>
 
       </SafeAreaView>
@@ -126,6 +199,10 @@ export class Mycredit extends Component {
   }
 }
 const styles = StyleSheet.create({
+  SafeAreaView: {
+    backgroundColor: '#fff',
+    minHeight: '100%'
+  },
   Credit: {
     backgroundColor: '#fff',
     shadowColor: "#000",
@@ -139,29 +216,71 @@ const styles = StyleSheet.create({
     elevation: 4,
     borderRadius: 8,
     padding: 30,
-    margin: 50
+    margin: 50,
+  },
+  Image: {
+    width: 50,
+    height: 50
   },
   Price: {
     fontWeight: '900',
-    fontSize: 25,
+    fontSize: 42,
     textAlign: 'center',
     fontFamily: "Avenir-Book"
   },
-  listRow: {
-    backgroundColor: '#F5f5f5',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#F5f5f5',
-    marginTop: 5,
-    marginBottom: 10,
-    marginRight: 40,
+  priceCredit: {
+    textAlign: 'center',
+    color: '#9B9B9B',
+    fontSize: 14
+  },
+  creditUsed: {
+    fontSize: 18,
+    fontFamily: "Avenir-Book",
     marginLeft: 40,
-    overflow: 'hidden',
+    fontWeight: '700'
+
+  },
+  listRow: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 1.00,
+
+    elevation: 1,
+
+    backgroundColor: '#ffff',
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 10,
+    borderRadius: 5,
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  ImageView: {
+    backgroundColor: '#F3F3F3', padding: 20, width: '20%'
+  },
+  TextView: {
+    width: '80%',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 20,
     display: 'flex',
     flexDirection: 'row',
-    position: 'relative',
-    minHeight: 70
+    justifyContent: 'space-between'
   },
+  smallFont: {
+    fontSize: 10,
+    color: '#5B5B5A',
+    fontFamily: "Avenir-Book",
 
+  },
+  BoldFont: {
+    fontSize: 14,
+    fontWeight: '800',
+    fontFamily: "Avenir-Book",
+  }
 })
 export default Mycredit

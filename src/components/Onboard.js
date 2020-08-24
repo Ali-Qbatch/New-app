@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   text: {
     color: '#5B5B5A',
     fontSize: 24,
-    fontWeight: '800',
+    fontWeight: '900',
     fontFamily: "Avenir-Book",
     marginTop: 40
   },
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#098DCD',
     padding: 16,
     color: '#fff',
-    width: '70%',
+    width: '80%',
     fontWeight: '900',
     textAlign: 'center',
     marginTop: 50,

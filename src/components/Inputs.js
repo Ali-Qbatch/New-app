@@ -4,6 +4,7 @@ function Inputs(props) {
   return (
     <SafeAreaView>
       <TextInput
+        clearButtonMode="always"
         placeholder={props.placeholder}
         style={styles.loginInput}
       />

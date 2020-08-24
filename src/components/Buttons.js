@@ -1,26 +1,36 @@
 import React from 'react'
-import styled from 'styled-components';
-const Button = styled.Text`
-      background-color:#098DCD;
-      padding:17px;
-      color:#fff;
-      width:80%;
-      margin: 0 auto;
-      fontWeight:600;
-      textAlign:center;
-      marginTop:50px;
-      overflow:hidden;
-          fontSize:16px;
-         borderRadius: 25px;
-
-        `;
+import { Button, View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView } from 'react-native';
 function Buttons(props) {
   return (
 
-    <Button onPress={props.onPress}>
-      {props.name}
-    </Button>
+    <TouchableOpacity style={styles.button} onPress={props.onPress}>
+      <Text style={styles.buttonText}>
+        {props.name}
+      </Text>
+    </TouchableOpacity>
   )
 }
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#098DCD',
+    padding: 17,
+    color: '#fff',
+    width: '80%',
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 50,
+    overflow: 'hidden',
+    fontSize: 16,
+    borderRadius: 25,
 
+  },
+  buttonText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: '800',
+    fontFamily: "Avenir-Book",
+  }
+})
 export default Buttons

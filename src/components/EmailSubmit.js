@@ -8,7 +8,7 @@ function EmailSubmit({ navigation }) {
     <SafeAreaView style={styles.SafeAreaView}>
 
       <Email style={styles.Email} />
-      <Text style={styles.emailsent}>
+      <Text style={styles.EmailSent}>
         Email Sent
       </Text>
       <Text style={styles.paragraph}>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  emailsent: {
+  EmailSent: {
     fontSize: 18,
     color: '#5B5B5A',
     fontWeight: "bold",
