@@ -1,20 +1,17 @@
 import React from 'react'
-import { StyleSheet, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import styled from 'styled-components';
 function Logo() {
   return (
-    <SafeAreaView>
-
-      <Image style={styles.logo} source={require('../Assets/WebLogoBlue.png')} />
-    </SafeAreaView>
-
+    <Image style={styles.logo} source={require('../Assets/logo/LogoFile.png')} />
   )
 }
 const styles = StyleSheet.create({
   logo: {
-    width: 250,
-    marginTop: 120,
-    marginLeft: 40
+    width: 120,
+    height: 100,
+    marginTop: 70,
+    marginLeft: 115,
   },
 
 });

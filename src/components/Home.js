@@ -1,220 +1,269 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, Alert, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { color } from 'react-native-reanimated';
-import { Row, Column as Col, Grid } from 'react-native-responsive-grid'
-import styled from 'styled-components';
+import { Row, Column as Col } from 'react-native-responsive-grid'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Screen from "../components/Screens/Screen"
+import Heart from '../Assets/Heart/Heart.svg'
+import Bars from '../Assets/Icon/Bars.svg'
 Icon.loadFont();
-function Home() {
+function Home({ navigation }) {
   return (
 
     <SafeAreaView style={{ backgroundColor: '#fff' }}>
-      <View style={{ marginLeft: 20, marginRight: 20 }}>
-        <View style={{ display: "flex", flexDirection: "row", justifyContent: 'center', marginTop: 50 }}>
+      <View style={{ marginLeft: 20, marginRight: 20, marginBottom: 35 }}>
+        <View style={{ display: "flex", flexDirection: "row", justifyContent: 'center', marginTop: 40 }}>
           <View style={{ display: "flex", flexDirection: "row" }}>
             <TextInput placeholder="Search Item" style={styles.searchInput}>
-
             </TextInput>
             <Icon style={styles.searchIcon} name="search">
             </Icon>
           </View>
-
-          <Text style={styles.menuView} >
-            <Icon style={styles.menuIcon} name="bars"></Icon>
-          </Text>
+          <TouchableOpacity>
+            <View style={styles.menuView} >
+              <Bars />
+            </View>
+          </TouchableOpacity>
         </View>
         <Text style={styles.heading}>
           Super Discount Detail
     </Text>
-        <ScrollView>
-          <Row  >
-            <Col smSize={100} mdSize={50} lgSize={25}>
-              <View style={styles.list}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Image style={{ width: 50, height: 50, }} source={require('../Assets/mobile.png')}></Image>
-                  <View style={styles.HeartView}>
-                    <Icon name="heart"></Icon>
+        <ScrollView style={{ marginBottom: 'auto' }}>
+          <Row>
+            <Col smSize={50} mdSize={50} lgSize={25}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail' })}>
+                <View style={styles.list} >
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/mobile.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
+            </Text>
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
+            </Text>
+                  <Text style={styles.price}>
+                    $ 7
+            </Text>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per bag
+              </Text>
+                    <Text style={styles.badge}>
+                      30% OFF
+              </Text>
                   </View>
                 </View>
-                <Text style={styles.pack} >
-                  pack Bag
-            </Text>
-                <Text style={{ fontSize: 10, margin: 5 }}>
-                  Super Hardly Bag
-            </Text>
-                <Text style={{ fontSize: 12, margin: 5 }}>
-                  $ 7
-            </Text>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
-                  <Text style={{ fontSize: 10, margin: 5 }}>
-                    per bag
-              </Text>
-                  <Text style={styles.badge}>
-                    30% off
-              </Text>
-                </View>
-              </View>
+              </TouchableOpacity>
             </Col>
-            <Col smSize={100} mdSize={50} lgSize={25}>
-              <View style={styles.list}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Image style={{ width: 50, height: 50, }} source={require('../Assets/mobile.png')}></Image>
-                  <View style={styles.HeartView}>
-                    <Icon name="heart"></Icon>
+            <Col smSize={50} mdSize={50} lgSize={25}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail' })}>
+                <View style={styles.list}>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/load.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
+            </Text>
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
+            </Text>
+                  <Text style={styles.price}>
+                    $ 200
+            </Text>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per item
+              </Text>
                   </View>
                 </View>
-                <Text style={styles.pack} >
-                  pack Bag
-            </Text>
-                <Text style={{ fontSize: 10, margin: 5 }}>
-                  Super Hardly Bag
-            </Text>
-                <Text style={{ fontSize: 12, margin: 5 }}>
-                  $ 7
-            </Text>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
-                  <Text style={{ fontSize: 10, margin: 5 }}>
-                    per bag
-              </Text>
-                  <Text style={styles.badge}>
-                    30% off
-              </Text>
-                </View>
-              </View>
+              </TouchableOpacity>
             </Col>
-            <Col smSize={100} mdSize={50} lgSize={25}>
-              <View style={styles.list}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Image style={{ width: 50, height: 50, }} source={require('../Assets/mobile.png')}></Image>
-                  <View style={styles.HeartView}>
-                    <Icon name="heart"></Icon>
+            <Col smSize={50} mdSize={50} lgSize={25}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail' })}>
+                <View style={styles.list}>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/load.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
+            </Text>
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
+            </Text>
+                  <Text style={styles.price}>
+                    $ 200
+            </Text>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per bag
+              </Text>
+                    <Text style={styles.badge}>
+                      30% OFF
+              </Text>
                   </View>
                 </View>
-                <Text style={styles.pack} >
-                  pack Bag
-            </Text>
-                <Text style={{ fontSize: 10, margin: 5 }}>
-                  Super Hardly Bag
-            </Text>
-                <Text style={{ fontSize: 12, margin: 5 }}>
-                  $ 7
-            </Text>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
-                  <Text style={{ fontSize: 10, margin: 5 }}>
-                    per bag
-              </Text>
-                  <Text style={styles.badge}>
-                    30% off
-              </Text>
-                </View>
-              </View>
-            </Col><Col smSize={100} mdSize={50} lgSize={25}>
-              <View style={styles.list}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Image style={{ width: 50, height: 50, }} source={require('../Assets/mobile.png')}></Image>
-                  <View style={styles.HeartView}>
-                    <Icon name="heart"></Icon>
-                  </View>
-                </View>
-                <Text style={styles.pack} >
-                  pack Bag
-            </Text>
-                <Text style={{ fontSize: 10, margin: 5 }}>
-                  Super Hardly Bag
-            </Text>
-                <Text style={{ fontSize: 12, margin: 5 }}>
-                  $ 7
-            </Text>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
-                  <Text style={{ fontSize: 10, margin: 5 }}>
-                    per bag
-              </Text>
-                  <Text style={styles.badge}>
-                    30% off
-              </Text>
-                </View>
-              </View>
+              </TouchableOpacity>
             </Col>
-            <Col smSize={100} mdSize={50} lgSize={25}>
-              <View style={styles.list}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Image style={{ width: 50, height: 50, }} source={require('../Assets/mobile.png')}></Image>
-                  <View style={styles.HeartView}>
-                    <Icon name="heart"></Icon>
+            <Col smSize={50} mdSize={50} lgSize={25}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail', image: 'mobile.png' })}>
+                <View style={styles.list}>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/mobile.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
+            </Text>
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
+            </Text>
+                  <Text style={styles.price}>
+                    $ 7
+            </Text>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per bag
+              </Text>
+
                   </View>
                 </View>
-                <Text style={styles.pack} >
-                  pack Bag
-            </Text>
-                <Text style={{ fontSize: 10, margin: 5 }}>
-                  Super Hardly Bag
-            </Text>
-                <Text style={{ fontSize: 12, margin: 5 }}>
-                  $ 7
-            </Text>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
-                  <Text style={{ fontSize: 10, margin: 5 }}>
-                    per bag
-              </Text>
-                  <Text style={styles.badge}>
-                    30% off
-              </Text>
-                </View>
-              </View>
+              </TouchableOpacity>
             </Col>
-            <Col smSize={100} mdSize={50} lgSize={25}>
-              <View style={styles.list}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Image style={{ width: 50, height: 50, }} source={require('../Assets/mobile.png')}></Image>
-                  <View style={styles.HeartView}>
-                    <Icon name="heart"></Icon>
+            <Col smSize={50} mdSize={50} lgSize={50}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail' })}>
+                <View style={styles.list}>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/mobile.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
+            </Text>
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
+            </Text>
+                  <Text style={styles.price}>
+                    $ 7
+            </Text>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per bag
+              </Text>
+                    <Text style={styles.badge}>
+                      30% OFF
+              </Text>
                   </View>
                 </View>
-                <Text style={styles.pack} >
-                  pack Bag
-            </Text>
-                <Text style={{ fontSize: 10, margin: 5 }}>
-                  Super Hardly Bag
-            </Text>
-                <Text style={{ fontSize: 12, margin: 5 }}>
-                  $ 7
-            </Text>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
-                  <Text style={{ fontSize: 10, margin: 5 }}>
-                    per bag
-              </Text>
-                  <Text style={styles.badge}>
-                    30% off
-              </Text>
-                </View>
-              </View>
+              </TouchableOpacity>
             </Col>
-            <Col smSize={100} mdSize={50} lgSize={25}>
-              <View style={styles.list}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Image style={{ width: 50, height: 50, }} source={require('../Assets/mobile.png')}></Image>
-                  <View style={styles.HeartView}>
-                    <Icon name="heart"></Icon>
+            <Col smSize={50} mdSize={50} lgSize={25}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail' })}>
+                <View style={styles.list}>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/load.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
+            </Text>
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
+            </Text>
+                  <Text style={styles.price}>
+                    $ 7
+            </Text>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per bag
+              </Text>
+                    {/* <Text style={styles.badge}>
+                    30% off
+              </Text> */}
                   </View>
                 </View>
-                <Text style={styles.pack} >
-                  pack Bag
+              </TouchableOpacity>
+            </Col>
+            <Col smSize={50} mdSize={50} lgSize={25}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail' })}>
+                <View style={styles.list}>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/mobile.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
             </Text>
-                <Text style={{ fontSize: 10, margin: 5 }}>
-                  Super Hardly Bag
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
             </Text>
-                <Text style={{ fontSize: 12, margin: 5 }}>
-                  $ 7
+                  <Text style={styles.price}>
+                    $ 7
             </Text>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
-                  <Text style={{ fontSize: 10, margin: 5 }}>
-                    per bag
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per bag
               </Text>
-                  <Text style={styles.badge}>
-                    30% off
+                    <Text style={styles.badge}>
+                      30% OFF
               </Text>
+                  </View>
                 </View>
-              </View>
+              </TouchableOpacity>
+            </Col>
+            <Col smSize={50} mdSize={50} lgSize={25}>
+              <TouchableOpacity onPress={() =>
+                navigation.navigate('ItemsDetail', { name: 'ItemsDetail' })}>
+                <View style={styles.list}>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <Image source={require('../Assets/mobile.png')}></Image>
+                    <View style={styles.HeartView}>
+                      <Heart />
+                    </View>
+                  </View>
+                  <Text style={styles.pack} >
+                    Pack Bag
+            </Text>
+                  <Text style={styles.bag}>
+                    Super Hardly Bag
+            </Text>
+                  <Text style={styles.price}>
+                    $ 7
+            </Text>
+                  <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <Text style={styles.bag}>
+                      per bag
+              </Text>
+                    <Text style={styles.badge}>
+                      30% OFF
+              </Text>
+                  </View>
+                </View>
+              </TouchableOpacity>
             </Col>
           </Row>
         </ScrollView>
@@ -245,13 +294,13 @@ const styles = StyleSheet.create({
   menuView: {
     width: 40,
     height: 40,
-    backgroundColor: "#ccc",
-    padding: 10,
+    backgroundColor: "#F8F8F8",
+    padding: 7,
     borderRadius: 5,
     marginLeft: 10,
     borderWidth: 1,
     overflow: "hidden",
-    borderColor: "#ccc"
+    borderColor: "#F8F8F8"
   },
   menuIcon: {
     fontSize: 20,
@@ -261,40 +310,66 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginLeft: 40,
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '700',
     fontFamily: "Avenir-Book"
   },
   list: {
-    backgroundColor: '#D3D3D3',
-    borderRadius: 5,
+    backgroundColor: '#F3F3F3',
+    borderRadius: 20,
     borderWidth: 1,
-    borderColor: '#D3D3D3',
+    borderColor: '#F3F3F3',
     margin: 5,
-    padding: 20
+    padding: 18,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.20,
+    shadowRadius: 1.41,
+
+    elevation: 2,
   },
   HeartView: {
     backgroundColor: '#fff',
     width: 30,
     height: 30,
-    padding: 8,
+    padding: 6,
     borderRadius: 50,
-    borderWidth: 1,
-    borderColor: '#fff'
   },
   badge: {
-    backgroundColor: '#000',
+    backgroundColor: '#098DCD',
     color: '#fff',
-    padding: 3,
+    paddingLeft: 7,
+    paddingRight: 7,
+    paddingTop: 2,
+    paddingBottom: 2,
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: '#098DCD',
     overflow: 'hidden',
-    fontSize: 12
+    fontSize: 10,
+    fontFamily: "Avenir-Book",
   },
   pack: {
-    fontWeight: '600',
-    margin: 5,
-    fontSize: 16
+    fontWeight: '800',
+    marginTop: 5,
+    fontSize: 14,
+    color: '#5B5B5A',
+    fontFamily: "Avenir-Book"
+  },
+  price: {
+    color: '#5B5B5A',
+    fontWeight: '900',
+    fontSize: 14,
+    marginTop: 10,
+    fontFamily: "Avenir-Book"
+  },
+  bag: {
+    fontSize: 10,
+    marginTop: 5,
+    color: '#5B5B5A',
+    fontFamily: "Avenir-Book"
   }
 })
 export default Home

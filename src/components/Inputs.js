@@ -13,11 +13,12 @@ function Inputs(props) {
 const styles = StyleSheet.create({
   loginInput: {
     height: 50,
-    borderColor: '#000',
+    borderColor: '#098DCD',
     borderWidth: 1,
     padding: 15,
     marginTop: 15,
-    borderRadius: 5
+    borderRadius: 5,
+    fontFamily: "Avenir-Book",
   },
 })
 export default Inputs

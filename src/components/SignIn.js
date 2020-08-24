@@ -1,39 +1,34 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, Alert } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Logo from './Logo'
 import Inputs from './Inputs';
 import Buttons from "./Buttons"
-import styled from 'styled-components';
-import NavigationScreen from './NavigateScreen'
+
 function SignIn({ navigation }) {
-  const Container = styled.View`
-    margin:15px
-  `;
+
   const titleText = "Welcome Back to the Discount"
   const forgetPassword = "Forget Password?"
   const havingAccount = "Don't have an Account?"
   return (
-    <SafeAreaView>
-      <Container>
-        <Logo />
+    <SafeAreaView style={{ margin: 15 }}>
+      <Logo />
 
-        <Text style={styles.titleText}>{titleText}</Text>
-        <Inputs placeholder="Email" />
-        <Inputs placeholder="Password" />
-        <Text onPress={() =>
-          navigation.navigate('ForgetPassword', { name: 'ForgetPassword' })} style={styles.forgetPassword}>{forgetPassword}</Text>
-        <Buttons name="Log In" onPress={() =>
-          navigation.navigate('NavigationScreen', { name: 'NavigationScreen' })} />
-        <View style={{ display: "flex", flexDirection: 'row', justifyContent: "center" }}>
-          <Text style={styles.Account}>{havingAccount}</Text>
-          <Text style={styles.signUp} onPress={() =>
-            navigation.navigate('SignUp', { name: 'SignUp' })}>
-            Sign Up
+      <Text style={styles.titleText}>{titleText}</Text>
+      <Inputs placeholder="Email" />
+      <Inputs placeholder="Password" />
+      <Text onPress={() =>
+        navigation.navigate('ForgetPassword', { name: 'ForgetPassword' })} style={styles.forgetPassword}>{forgetPassword}</Text>
+      <Buttons name="Log In" onPress={() =>
+        navigation.navigate('NavigationScreen', { name: 'NavigationScreen' })} />
+      <View style={{ display: "flex", flexDirection: 'row', justifyContent: "center" }}>
+        <Text style={styles.Account}>{havingAccount}</Text>
+        <Text style={styles.signUp} onPress={() =>
+          navigation.navigate('SignUp', { name: 'SignUp' })}>
+          Sign Up
 
           </Text>
 
-        </View>
-      </Container>
+      </View>
     </SafeAreaView>
 
   )
@@ -42,7 +37,8 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 28,
     fontWeight: "bold",
-    padding: 15,
+    paddingTop: 10,
+    paddingBottom: 10,
     color: "#000",
     fontFamily: "Avenir-Book"
   },
@@ -50,7 +46,8 @@ const styles = StyleSheet.create({
     display: "flex",
     textAlign: "right",
     fontSize: 12,
-    margin: 10
+    margin: 10,
+    color: '#ccc'
   },
   Account: {
     fontSize: 12,

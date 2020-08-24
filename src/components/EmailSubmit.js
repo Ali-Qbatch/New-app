@@ -1,13 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, Alert } from 'react-native';
-import Logo from "./Logo"
+import Email from '../Assets/ForgetPassword/Emailsent.svg'
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Buttons from './Buttons';
 function EmailSubmit({ navigation }) {
   const Detail = "Please Check your email,we have sent the instructions to change password."
   return (
     <SafeAreaView style={styles.SafeAreaView}>
 
-      <Logo />
+      <Email style={styles.Email} />
       <Text style={styles.emailsent}>
         Email Sent
       </Text>
@@ -22,24 +22,30 @@ function EmailSubmit({ navigation }) {
 }
 const styles = StyleSheet.create({
   SafeAreaView: {
-    margin: 15
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   emailsent: {
-    textAlign: "center",
-    fontSize: 23,
+    fontSize: 18,
+    color: '#5B5B5A',
     fontWeight: "bold",
-    marginBottom: 20,
-    marginTop: 20
+    marginBottom: 10,
+    marginTop: 20,
+    fontFamily: "Avenir-Book"
+
   },
   paragraph: {
-    width: 300,
+    width: 230,
     fontSize: 14,
     textAlign: "center",
     marginTop: 15,
     marginTop: 10,
     marginBottom: 10,
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
+    fontFamily: "Avenir-Book",
+    color: '#9B9B9B'
   }
 })
 export default EmailSubmit

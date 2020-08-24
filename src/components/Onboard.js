@@ -1,117 +1,109 @@
 import React, { Component } from 'react'
-import { AppRegistry, StyleSheet, Text, View, Image } from 'react-native'
-import styled from 'styled-components';
-
+import { StyleSheet, Text, View } from 'react-native'
 import Swiper from 'react-native-swiper'
-import Buttons from './Buttons'
-import { max } from 'react-native-reanimated'
-const Button = styled.Text`
-      background-color:#000;
-      padding:17px;
-      color:#fff;
-      width:80%;
-      margin: 0 auto;
-      fontWeight:800;
-      textAlign:center;
-      marginTop:50px;
-      overflow:hidden;
-      fontSize:16px;
-         borderRadius: 25px
-        `;
-const styles = StyleSheet.create({
-  wrapper: {},
-  slide1: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff'
-  },
-  slide2: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff'
-  },
-  slide3: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff'
-  },
-  text: {
-    color: '#000',
-    fontSize: 24,
-    fontWeight: 'bold'
-  },
-  title: {
-    paddingLeft: 50,
-    paddingRight: 50,
-    fontSize: 16,
-    paddingTop: 20,
-    paddingBottom: 10
-  },
-  login: {
-    fontSize: 15,
-    margin: 20
-  }
-})
-
+import First from '../Assets/SliderImages/first.svg'
+import Second from '../Assets/SliderImages/second.svg'
+import Third from '../Assets/SliderImages/third.svg'
 export default class SwiperComponent extends Component {
   render() {
     return (
-      <Swiper style={styles.wrapper} showsButtons={true} autoplay={true} activeDotColor={"black"} showsButtons={false}>
+      <Swiper style={styles.wrapper} autoplay={true} activeDotColor={"#098DCD"} showsButtons={false}>
         <View style={styles.slide1}>
-          <Text style={styles.text}><Image source={require('../Assets/WebLogoBlue.png')} />
-          </Text>
+          <First maxheight="100%" maxwidth="100%" />
           <Text style={styles.text}>
             Find New Items
           </Text>
           <Text style={styles.title}>
-            In publishing and graphic design, Lorem ipsum is a placeholder text
+            Explore the items which are available only, No hassle.
           </Text>
-          <Button title="hello" onPress={() =>
+          <Text style={styles.button} title="hello" onPress={() =>
             this.props.navigation.navigate('SignUp')}>
             Sign Up
-          </Button>
+          </Text>
           <Text style={styles.login} onPress={() =>
             this.props.navigation.navigate('SignIn', { name: 'SignIn' })
           }>Log In </Text>
         </View>
-        <View style={styles.slide2}>
-          <Text ><Image source={require('../Assets/WebLogoBlue.png')} /></Text>
+        <View style={styles.slide1}>
+          <Text>
+            <Second maxheight="100%" maxwidth="100%" />
+          </Text>
           <Text style={styles.text}>
             Quick Reservation
           </Text>
           <Text style={styles.title}>
-            In publishing and graphic design, Lorem ipsum is a placeholder text
+            Explore the items which are available only, No hassle.
           </Text>
-          <Button title="hello" onPress={() =>
+          <Text style={styles.button} title="hello" onPress={() =>
             this.props.navigation.navigate('SignUp')}>
             Sign Up
-          </Button>
+          </Text>
           <Text style={styles.login} onPress={() =>
             this.props.navigation.navigate('SignIn', { name: 'SignIn' })
           }>Log In </Text>
         </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}><Image source={require('../Assets/WebLogoBlue.png')} /></Text>
+        <View style={styles.slide1}>
+          <Third maxheight="100%" maxwidth="100%" />
           <Text style={styles.text}>
-            Quick Notifaction
+            Quick Notification
           </Text>
           <Text style={styles.title}>
-            In publishing and graphic design, Lorem ipsum is a placeholder text
+            Get the notifications of our new and demanded items.
           </Text>
-          <Button title="hello" onPress={() =>
+          <Text style={styles.button} title="hello" onPress={() =>
             this.props.navigation.navigate('SignUp')}>
             Sign Up
-          </Button>
+          </Text>
           <Text style={styles.login} onPress={() =>
             this.props.navigation.navigate('SignIn', { name: 'SignIn' })
           }>Log In </Text>
         </View>
-      </Swiper >
+      </Swiper>
     )
   }
 }
-
-AppRegistry.registerComponent('myproject', () => SwiperComponent)
+const styles = StyleSheet.create({
+  slide1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    marginTop: 100
+  },
+  text: {
+    color: '#5B5B5A',
+    fontSize: 24,
+    fontWeight: '800',
+    fontFamily: "Avenir-Book",
+    marginTop: 40
+  },
+  title: {
+    paddingLeft: 60,
+    paddingRight: 60,
+    fontSize: 16,
+    paddingTop: 8,
+    paddingBottom: 10,
+    fontFamily: "Avenir-Book",
+    color: '#5B5B5A85',
+    textAlign: "center"
+  },
+  login: {
+    fontSize: 14,
+    margin: 20,
+    fontFamily: "Avenir-Book",
+    fontWeight: '600'
+  },
+  button: {
+    backgroundColor: '#098DCD',
+    padding: 16,
+    color: '#fff',
+    width: '70%',
+    fontWeight: '900',
+    textAlign: 'center',
+    marginTop: 50,
+    overflow: 'hidden',
+    fontSize: 16,
+    borderRadius: 28,
+    fontFamily: "Avenir-Book",
+  }
+})

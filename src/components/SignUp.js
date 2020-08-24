@@ -1,50 +1,44 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, Alert } from 'react-native';
-import styled from 'styled-components';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Logo from "./Logo"
 import Inputs from "./Inputs"
 import Buttons from "./Buttons"
 import Icon from 'react-native-vector-icons/FontAwesome';
 Icon.loadFont();
 function SignUp({ navigation }) {
-  const Container = styled.View`
-    margin:15px
-  `;
-  const titleText = "Lets find some Amazing items"
+  const titleText = "Let's find some amazing items"
   const Account = "Already Have a Account?"
   const Connect = "Or Connect With"
   return (
-    <SafeAreaView>
-      <Container>
-        <Logo />
-        <Text style={styles.titleText}>
-          {titleText}
+    <SafeAreaView style={{ margin: 15 }}>
+      <Logo />
+      <Text style={styles.titleText}>
+        {titleText}
+      </Text>
+      <Inputs placeholder="Full Name" />
+      <Inputs placeholder="Email" />
+      <Inputs placeholder="Password" />
+      <Buttons name="Sign Up" />
+      <View style={{ display: "flex", flexDirection: 'row', justifyContent: "center" }}>
+        <Text style={styles.Account}>
+          {Account}
         </Text>
-        <Inputs placeholder="Full Name" />
-        <Inputs placeholder="Email" />
-        <Inputs placeholder="Password" />
-        <Buttons name="Sign Up" />
-        <View style={{ display: "flex", flexDirection: 'row', justifyContent: "center" }}>
-          <Text style={styles.Account}>
-            {Account}
+        <Text style={styles.signUp} onPress={() =>
+          navigation.navigate('SignIn', { name: 'SignIn' })}>
+          Log In
           </Text>
-          <Text style={styles.signUp} onPress={() =>
-            navigation.navigate('SignIn', { name: 'SignIn' })}>
-            Log In
-          </Text>
-        </View>
-        <Text style={{ textAlign: "center", marginTop: 10 }}>
+      </View>
+      {/* <Text style={{ textAlign: "center", marginTop: 10 }}>
           {Connect}
-        </Text>
-        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: "center" }}>
+        </Text> */}
+      {/* <View style={{ display: 'flex', flexDirection: 'row', justifyContent: "center" }}>
           <Icon style={styles.facebook} name="facebook" ></Icon>
           <Icon style={styles.Icon} name="twitter">
           </Icon>
           <Icon style={styles.Icon} name="envelope">
 
           </Icon>
-        </View>
-      </Container>
+        </View> */}
     </SafeAreaView>
   )
 }
@@ -53,7 +47,8 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "bold",
     padding: 15,
-    color: "#000",
+    color: '#5B5B5A',
+    fontFamily: "Avenir-Book",
   },
   Account: {
     fontSize: 12,
