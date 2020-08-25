@@ -41,18 +41,18 @@ function SignUp({navigation}) {
 }
 const styles = StyleSheet.create({
   SafeAreaView: {
-    margin: '5%',
+    margin: '3%',
   },
   titleText: {
     fontSize: 28,
-    fontWeight: 'bold',
-    padding: 15,
+    fontWeight: '900',
+    paddingTop: '4%',
     color: '#5B5B5A',
     fontFamily: 'Avenir-Book',
   },
   Account: {
     fontSize: 12,
-    margin: 10,
+    margin: '2%',
     textAlign: 'center',
     color: 'grey',
   },
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#000',
     paddingRight: 8,
-    marginTop: 7.5,
+    marginTop: 5,
   },
   // Icon: {
   //   margin: 9,

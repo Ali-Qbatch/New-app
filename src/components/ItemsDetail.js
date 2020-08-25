@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '800',
     color: '#5B5B5A',
     fontFamily: 'Avenir-Book',
   },
@@ -253,6 +253,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     textDecorationLine: 'underline',
     textAlign: 'center',
+    fontWeight: '700',
   },
   addToCartView: {
     width: 150,
@@ -263,6 +264,7 @@ const styles = StyleSheet.create({
   CheckOutText: {
     color: '#fff',
     textAlign: 'center',
+    fontWeight: '600',
   },
   ButtonsView: {
     marginBottom: 20,

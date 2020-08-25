@@ -37,7 +37,7 @@ function firstScreenStack({navigation}) {
         name="Profile"
         component={Profile}
         options={{
-          title: 'profile',
+          title: 'Profile',
           headerLeft: () => (
             <NavigationDrawerStructure navigationProps={navigation} />
           ),

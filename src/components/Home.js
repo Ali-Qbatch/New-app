@@ -275,6 +275,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     marginTop: 30,
+    marginBottom: 10,
     marginLeft: 40,
     fontSize: 20,
     fontWeight: '700',

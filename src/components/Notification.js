@@ -52,9 +52,11 @@ export class Notification extends Component {
           <ScrollView>
             <View style={styles.cart}>
               <View style={styles.image}>
-                <Image source={require('../Assets/cart.png')} />
+                <Image
+                  style={styles.cartImage}
+                  source={require('../Assets/cart.png')}
+                />
               </View>
-
               <View style={styles.textView}>
                 <View style={styles.text}>
                   <Text>Grasser-Yellower</Text>
@@ -118,28 +120,30 @@ export class Notification extends Component {
               onRequestClose={() => {
                 Alert.alert('Modal has been closed.');
               }}>
-              <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                  <TouchableHighlight
-                    onPress={() => {
-                      this.setModalVisible(!modalVisible);
-                    }}>
-                    <View style={styles.cross}>
-                      <Icon name="times" size={20} />
+              <ScrollView>
+                <View style={styles.centeredView}>
+                  <View style={styles.modalView}>
+                    <TouchableHighlight
+                      onPress={() => {
+                        this.setModalVisible(!modalVisible);
+                      }}>
+                      <View style={styles.cross}>
+                        <Icon name="times" size={20} />
+                      </View>
+                    </TouchableHighlight>
+                    <View style={styles.ReservedModel}>
+                      <Reserved />
                     </View>
-                  </TouchableHighlight>
-                  <View style={styles.ReservedModel}>
-                    <Reserved />
+                    <Text style={styles.modalText}>Items Reserved</Text>
+                    <Text style={styles.modalPara}>
+                      Grasser-Yellow has been reserved for you collect it
+                      immediately
+                    </Text>
+                    <Text style={styles.expire}>Reserve Expire</Text>
+                    <Text style={styles.expireDate}>30 July 2020</Text>
                   </View>
-                  <Text style={styles.modalText}>Items Reserved</Text>
-                  <Text style={styles.modalPara}>
-                    Grasser-Yellow has been reserved for you collect it
-                    immediately
-                  </Text>
-                  <Text style={styles.expire}>Reserve Expire</Text>
-                  <Text style={styles.expireDate}>30 July 2020</Text>
                 </View>
-              </View>
+              </ScrollView>
             </Modal>
           </ScrollView>
         </View>
@@ -175,8 +179,12 @@ const styles = StyleSheet.create({
   },
   image: {
     backgroundColor: '#F3F3F3',
-    padding: 10,
+    padding: '3%',
     width: '20%',
+  },
+  cartImage: {
+    maxHeight: 50,
+    maxWidth: 50,
   },
   text: {
     padding: 10,
@@ -217,6 +225,7 @@ const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     margin: 0,
+    minHeight: '100%',
   },
   modalView: {
     backgroundColor: '#F1F1F1',
@@ -278,7 +287,7 @@ const styles = StyleSheet.create({
   },
   checkOutText: {
     color: '#fff',
-    fontWeight: '800',
+    fontWeight: '900',
     fontFamily: 'Avenir-Book',
   },
   ReservedModel: {
@@ -287,9 +296,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   border: {
-    borderBottomColor: '#F5F5F5',
-    borderWidth: 0.5,
-    marginLeft: 7,
+    borderBottomColor: '#f3f3f3',
+    borderWidth: 0.4,
+    marginLeft: 10,
+    marginRight: 10,
   },
   textView: {
     width: '80%',

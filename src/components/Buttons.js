@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: 30,
+    marginTop: '3%',
     overflow: 'hidden',
     fontSize: 16,
     borderRadius: 25,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontWeight: '800',
+    fontWeight: '900',
     fontFamily: 'Avenir-Book',
   },
 });

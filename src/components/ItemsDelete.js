@@ -11,6 +11,7 @@ import {
   Modal,
   TouchableHighlight,
 } from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 export class ItemsDelete extends Component {
   constructor(props) {
     super(props);
@@ -27,56 +28,61 @@ export class ItemsDelete extends Component {
     const {navigation} = this.props;
     return (
       <SafeAreaView style={styles.SafeAreaView}>
-        <View style={styles.BackButton}>
-          <Icon
-            name="angle-left"
-            size={35}
-            onPress={() => {
-              navigation.goBack();
-            }}
-          />
-        </View>
-        <View>
-          <View style={styles.viewItem}>
-            <View>
-              <Image source={require('../Assets/Load/load.png')} />
-            </View>
-            <View style={styles.information}>
-              <View>
-                <Text style={styles.Name}>Grasser</Text>
-                <Text style={styles.DownText}>$ 200</Text>
-              </View>
-              <View>
-                <Text style={styles.Name}>Expiration</Text>
-                <Text style={styles.DownText}>30 July, 2020</Text>
-              </View>
-              <View>
-                <Text>
-                  <View>
-                    <Text style={styles.Name}>Connects to used</Text>
-                    <Text style={styles.DownText}>$ 30</Text>
-                  </View>
-                </Text>
-              </View>
-            </View>
-          </View>
-          <View style={styles.description}>
-            <Text style={styles.descriptionHeading}>Description</Text>
-            <Text style={styles.descriptionPara}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries,
-            </Text>
-            <Buttons
-              name="Cancel Item Reservation"
+        <ScrollView>
+          <View style={styles.BackButton}>
+            <Icon
+              name="angle-left"
+              size={35}
               onPress={() => {
-                this.setModalVisible(!modalVisible);
+                navigation.goBack();
               }}
             />
           </View>
-        </View>
+          <View>
+            <View style={styles.viewItem}>
+              <View>
+                <Image
+                  style={styles.cartImage}
+                  source={require('../Assets/Load/load.png')}
+                />
+              </View>
+              <View style={styles.information}>
+                <View>
+                  <Text style={styles.Name}>Grasser</Text>
+                  <Text style={styles.DownText}>$ 200</Text>
+                </View>
+                <View>
+                  <Text style={styles.Name}>Expiration</Text>
+                  <Text style={styles.DownText}>30 July, 2020</Text>
+                </View>
+                <View>
+                  <Text>
+                    <View>
+                      <Text style={styles.Name}>Connects to used</Text>
+                      <Text style={styles.DownText}>$ 30</Text>
+                    </View>
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View style={styles.description}>
+              <Text style={styles.descriptionHeading}>Description</Text>
+              <Text style={styles.descriptionPara}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries,
+              </Text>
+              <Buttons
+                name="Cancel Item Reservation"
+                onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+              />
+            </View>
+          </View>
+        </ScrollView>
         <Modal
           animationType="slide"
           transparent={true}
@@ -84,32 +90,34 @@ export class ItemsDelete extends Component {
           onRequestClose={() => {
             Alert.alert('Modal has been closed.');
           }}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <TouchableHighlight
-                onPress={() => {
-                  this.setModalVisible(!modalVisible);
-                }}>
-                <View style={styles.cross}>
-                  <Icon name="times" size={20} />
+          <ScrollView>
+            <View style={styles.centeredView}>
+              <View style={styles.modalView}>
+                <TouchableHighlight
+                  onPress={() => {
+                    this.setModalVisible(!modalVisible);
+                  }}>
+                  <View style={styles.cross}>
+                    <Icon name="times" size={20} />
+                  </View>
+                </TouchableHighlight>
+                <View style={styles.removeView}>
+                  <Checked />
                 </View>
-              </TouchableHighlight>
-              <View style={styles.removeView}>
-                <Checked />
+                <Text style={styles.modalText}>Items Rmoved</Text>
+                <Text style={styles.modalPara}>
+                  Grasser-Yellow has been removed for{'\n'}
+                  from your reserve list
+                </Text>
+                <Buttons
+                  name="Go to  Reservation"
+                  onPress={() =>
+                    navigation.navigate('Reservation', {name: 'Reservation'})
+                  }
+                />
               </View>
-              <Text style={styles.modalText}>Items Rmoved</Text>
-              <Text style={styles.modalPara}>
-                Grasser-Yellow has been removed for{'\n'}
-                from your reserve list
-              </Text>
-              <Buttons
-                name="Go to  Reservation"
-                onPress={() =>
-                  navigation.navigate('Reservation', {name: 'Reservation'})
-                }
-              />
             </View>
-          </View>
+          </ScrollView>
         </Modal>
       </SafeAreaView>
     );
@@ -127,10 +135,11 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    padding: 30,
+    padding: '5%',
   },
   information: {
-    marginTop: 20,
+    marginTop: '5%',
+    marginLeft: '2%',
   },
   DownText: {
     fontSize: 20,
@@ -160,9 +169,10 @@ const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     margin: 0,
+    minHeight: '100%',
   },
   modalView: {
-    backgroundColor: '#F1F1F1',
+    backgroundColor: '#fff',
     padding: 35,
     flex: 1,
     borderRadius: 20,
@@ -171,7 +181,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     fontFamily: 'Avenir-Book',
     fontSize: 25,
-    marginTop: 30,
+    marginTop: '5%',
     textAlign: 'center',
     alignItems: 'center',
   },
@@ -179,8 +189,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#ccc',
     textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 20,
+    marginTop: '3%',
+    marginBottom: '4%',
     alignItems: 'center',
   },
   expire: {
@@ -209,8 +219,12 @@ const styles = StyleSheet.create({
   },
   removeView: {
     marginBottom: 40,
-    marginTop: 100,
+    marginTop: '25%',
     alignItems: 'center',
+  },
+  cartImage: {
+    maxWidth: '100%',
+    maxHeight: '100%',
   },
 });
 export default ItemsDelete;

@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingTop: 10,
     paddingBottom: 10,
-    marginTop: '60%',
+    marginTop: '50%',
     color: '#5B5B5A',
     fontFamily: 'Avenir-Book',
   },

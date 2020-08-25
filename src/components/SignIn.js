@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 28,
     fontWeight: 'bold',
-    paddingTop: 10,
+    paddingTop: '3%',
     paddingBottom: 10,
     color: '#000',
     fontFamily: 'Avenir-Book',
@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     fontSize: 12,
     margin: 10,
-    color: '#ccc',
+    color: '#5B5B5A',
   },
   Account: {
     fontSize: 12,
-    margin: 10,
+    margin: '2%',
     textAlign: 'center',
     color: 'grey',
     paddingLeft: 10,
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#000',
     paddingRight: 8,
-    marginTop: 7.5,
+    marginTop: 5,
   },
   AccountView: {
     display: 'flex',
