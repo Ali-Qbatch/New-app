@@ -1,19 +1,14 @@
 import React, {Component} from 'react';
-import {
-  Button,
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-  SafeAreaView,
-} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet, SafeAreaView} from 'react-native';
 import Buttons from '../../components/Buttons';
 export class Help extends Component {
   render() {
     return (
       <SafeAreaView style={styles.SafeAreaView}>
-        <Text style={styles.Help}>Having a trouble?</Text>
+        <TouchableOpacity>
+          <Text style={styles.Help}>Having a trouble?</Text>
+        </TouchableOpacity>
+
         <Buttons name="Call BWD" />
         <Text style={styles.Email}>Email BWD</Text>
       </SafeAreaView>

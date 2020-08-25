@@ -28,12 +28,7 @@ function SignIn({navigation}) {
           navigation.navigate('NavigationScreen', {name: 'NavigationScreen'})
         }
       />
-      <View
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-        }}>
+      <View style={styles.AccountView}>
         <Text style={styles.Account}>{havingAccount}</Text>
         <Text
           style={styles.signUp}
@@ -76,6 +71,11 @@ const styles = StyleSheet.create({
     color: '#000',
     paddingRight: 8,
     marginTop: 7.5,
+  },
+  AccountView: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 

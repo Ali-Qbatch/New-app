@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import Buttons from '../Buttons';
 import {
-  Button,
   View,
   Text,
   TouchableOpacity,
-  Image,
   StyleSheet,
   SafeAreaView,
   TextInput,
@@ -51,6 +49,10 @@ const styles = StyleSheet.create({
   },
   textArea: {
     height: 100,
+  },
+  SafeAreaView: {
+    backgroundColor: '#fff',
+    minHeight: '100%',
   },
 });
 export default Feedback;

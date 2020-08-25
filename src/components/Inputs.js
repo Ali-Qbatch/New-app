@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, Alert } from 'react-native';
+import React from 'react';
+import {StyleSheet, SafeAreaView, TextInput} from 'react-native';
 function Inputs(props) {
   return (
     <SafeAreaView>
@@ -9,7 +9,7 @@ function Inputs(props) {
         style={styles.loginInput}
       />
     </SafeAreaView>
-  )
+  );
 }
 const styles = StyleSheet.create({
   loginInput: {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     padding: 15,
     marginTop: 15,
     borderRadius: 5,
-    fontFamily: "Avenir-Book",
+    fontFamily: 'Avenir-Book',
   },
-})
-export default Inputs
+});
+export default Inputs;

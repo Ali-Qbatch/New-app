@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
-import { Button, View, Text, TouchableOpacity, Image } from 'react-native';
+import React, {Component} from 'react';
+import {Text} from 'react-native';
 export class Setting extends Component {
   render() {
-    return (
-      <Text>
-        Setting
-      </Text>
-    )
+    return <Text>Setting</Text>;
   }
 }
 
-export default Setting
+export default Setting;

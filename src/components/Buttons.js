@@ -1,14 +1,11 @@
-import React from 'react'
-import { Button, View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView } from 'react-native';
+import React from 'react';
+import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 function Buttons(props) {
   return (
-
     <TouchableOpacity style={styles.button} onPress={props.onPress}>
-      <Text style={styles.buttonText}>
-        {props.name}
-      </Text>
+      <Text style={styles.buttonText}>{props.name}</Text>
     </TouchableOpacity>
-  )
+  );
 }
 const styles = StyleSheet.create({
   button: {
@@ -20,17 +17,16 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: 50,
+    marginTop: 30,
     overflow: 'hidden',
     fontSize: 16,
     borderRadius: 25,
-
   },
   buttonText: {
     color: '#fff',
     textAlign: 'center',
     fontWeight: '800',
-    fontFamily: "Avenir-Book",
-  }
-})
-export default Buttons
+    fontFamily: 'Avenir-Book',
+  },
+});
+export default Buttons;

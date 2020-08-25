@@ -55,7 +55,7 @@ export class Notification extends Component {
                 <Image source={require('../Assets/cart.png')} />
               </View>
 
-              <View>
+              <View style={styles.textView}>
                 <View style={styles.text}>
                   <Text>Grasser-Yellower</Text>
                   <Text>$200</Text>
@@ -176,14 +176,13 @@ const styles = StyleSheet.create({
   image: {
     backgroundColor: '#F3F3F3',
     padding: 10,
-    width: 100,
+    width: '20%',
   },
   text: {
     padding: 10,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: 230,
     height: 40,
   },
   crash: {
@@ -291,6 +290,9 @@ const styles = StyleSheet.create({
     borderBottomColor: '#F5F5F5',
     borderWidth: 0.5,
     marginLeft: 7,
+  },
+  textView: {
+    width: '80%',
   },
 });
 export default Notification;

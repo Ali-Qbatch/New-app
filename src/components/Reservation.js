@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
-import {Row, Column as Col, Grid} from 'react-native-responsive-grid';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Toll from '../Assets/Icon/toll.svg';
