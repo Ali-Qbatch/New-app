@@ -162,8 +162,8 @@ const styles = StyleSheet.create({
 
     elevation: 4,
     borderRadius: 8,
-    padding: 30,
-    margin: 50,
+    padding: '5%',
+    margin: '10%',
   },
   Image: {
     width: 50,
@@ -185,6 +185,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Avenir-Book',
     marginLeft: 40,
     fontWeight: '700',
+    marginBottom: '2%',
   },
   listRow: {
     shadowColor: '#000',
@@ -198,9 +199,9 @@ const styles = StyleSheet.create({
     elevation: 1,
 
     backgroundColor: '#ffff',
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 10,
+    marginLeft: '5%',
+    marginRight: '5%',
+    marginBottom: '3%',
     borderRadius: 5,
     display: 'flex',
     flexDirection: 'row',

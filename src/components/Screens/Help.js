@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
-import {Text, TouchableOpacity, StyleSheet, SafeAreaView} from 'react-native';
+import {Text, StyleSheet, SafeAreaView} from 'react-native';
 import Buttons from '../../components/Buttons';
 export class Help extends Component {
   render() {
     return (
       <SafeAreaView style={styles.SafeAreaView}>
-        <TouchableOpacity>
-          <Text style={styles.Help}>Having a trouble?</Text>
-        </TouchableOpacity>
-
+        <Text style={styles.Help}>Having a trouble?</Text>
         <Buttons name="Call BWD" />
         <Text style={styles.Email}>Email BWD</Text>
       </SafeAreaView>
@@ -21,16 +18,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 23,
     fontWeight: '600',
-    marginLeft: 30,
-    marginRight: 30,
-    marginTop: 30,
+    marginTop: '5%',
   },
   Email: {
     borderWidth: 2,
     borderColor: '#098DCD',
     padding: 15,
     textAlign: 'center',
-    margin: 44,
+    margin: '10%',
     borderRadius: 25,
     color: '#098DCD',
   },

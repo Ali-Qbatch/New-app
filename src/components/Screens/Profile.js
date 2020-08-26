@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {
-  Button,
   View,
   Text,
-  TouchableOpacity,
+  TouchableHighlight,
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
@@ -13,7 +12,7 @@ export class Profile extends Component {
     const {navigation} = this.props;
     return (
       <SafeAreaView style={styles.SafeAreaView}>
-        <TouchableOpacity
+        <TouchableHighlight
           onPress={() =>
             navigation.navigate('UpdateComponent', {name: 'UpdateComponent'})
           }>
@@ -30,8 +29,8 @@ export class Profile extends Component {
               </View>
             </View>
           </View>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </TouchableHighlight>
+        <TouchableHighlight
           onPress={() =>
             navigation.navigate('UpdateComponent', {name: 'UpdateComponent'})
           }>
@@ -48,8 +47,8 @@ export class Profile extends Component {
               </View>
             </View>
           </View>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </TouchableHighlight>
+        <TouchableHighlight
           onPress={() =>
             navigation.navigate('UpdateComponent', {name: 'UpdateComponent'})
           }>
@@ -66,7 +65,7 @@ export class Profile extends Component {
               </View>
             </View>
           </View>
-        </TouchableOpacity>
+        </TouchableHighlight>
       </SafeAreaView>
     );
   }
@@ -81,9 +80,9 @@ const styles = StyleSheet.create({
     borderTopColor: '#0000001A',
     borderTopWidth: 1,
     paddingTop: 20,
-    paddingLeft: 35,
-    paddingRight: 30,
-    paddingBottom: 20,
+    paddingLeft: '10%',
+    paddingRight: '10%',
+    paddingBottom: '4%',
   },
   text: {
     fontFamily: 'Avenir-Book',

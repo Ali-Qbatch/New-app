@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, Image, View} from 'react-native';
-import styled from 'styled-components';
 function Logo() {
   return (
     <View style={styles.logoView}>
@@ -16,7 +15,6 @@ const styles = StyleSheet.create({
     width: 120,
     height: 100,
     marginTop: '15%',
-    // marginLeft: '25%',
   },
   logoView: {
     display: 'flex',

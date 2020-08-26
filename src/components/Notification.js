@@ -8,8 +8,8 @@ import {
   Modal,
   Alert,
   TouchableHighlight,
+  ScrollView,
 } from 'react-native';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Reserved from '../Assets/Reserved/Reserved.svg';
 export class Notification extends Component {
@@ -65,23 +65,28 @@ export class Notification extends Component {
                 <View style={styles.border}></View>
                 <View style={styles.text}>
                   <View style={styles.counterView}>
-                    <TouchableOpacity onPress={() => this.Decrement()}>
+                    <TouchableHighlight
+                      underlayColor="white"
+                      onPress={() => this.Decrement()}>
                       <View style={styles.counter}>
                         <Icon name="minus" color={'#1F202033'} size={8} />
                       </View>
-                    </TouchableOpacity>
+                    </TouchableHighlight>
                     <View>
                       <Text style={styles.stateCount}>{this.state.count}</Text>
                     </View>
 
-                    <TouchableOpacity onPress={() => this.Increment()}>
+                    <TouchableHighlight
+                      underlayColor="white"
+                      onPress={() => this.Increment()}>
                       <View style={styles.counter}>
                         <Icon name="plus" color={'#1F202033'} size={8} />
                       </View>
-                    </TouchableOpacity>
+                    </TouchableHighlight>
                   </View>
                   <View style={styles.counterView}>
-                    <TouchableOpacity
+                    <TouchableHighlight
+                      underlayColor="white"
                       onPress={() =>
                         navigation.navigate('ItemsDelete', {
                           name: 'ItemsDelete',
@@ -90,15 +95,16 @@ export class Notification extends Component {
                       <View style={styles.crash}>
                         <Icon name="trash" color={'#fff'} size={12} />
                       </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      underlayColor="white"
                       onPress={() => {
                         this.setModalVisible(!modalVisible);
                       }}>
                       <View style={styles.crash}>
                         <Icon name="check" color={'#fff'} size={12} />
                       </View>
-                    </TouchableOpacity>
+                    </TouchableHighlight>
                   </View>
                 </View>
               </View>
@@ -107,11 +113,11 @@ export class Notification extends Component {
             <View style={styles.CheckOut}>
               <Text style={styles.total}>Total</Text>
               <Text style={styles.total}>$400</Text>
-              <TouchableOpacity>
+              <TouchableHighlight underlayColor="white">
                 <View style={styles.addToCart}>
                   <Text style={styles.checkOutText}>Check Out</Text>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </View>
             <Modal
               animationType="slide"
@@ -124,6 +130,7 @@ export class Notification extends Component {
                 <View style={styles.centeredView}>
                   <View style={styles.modalView}>
                     <TouchableHighlight
+                      underlayColor="white"
                       onPress={() => {
                         this.setModalVisible(!modalVisible);
                       }}>
@@ -231,7 +238,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#F1F1F1',
     padding: 35,
     flex: 1,
-    borderRadius: 20,
   },
   modalText: {
     fontWeight: '800',

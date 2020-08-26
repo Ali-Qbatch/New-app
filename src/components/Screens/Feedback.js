@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
 import Buttons from '../Buttons';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, TextInput} from 'react-native';
 export class Feedback extends Component {
   render() {
     return (
@@ -16,16 +9,13 @@ export class Feedback extends Component {
         <View style={styles.textAreaContainer}>
           <TextInput
             style={styles.textArea}
-            underlineColorAndroid="transparent"
             placeholder="Type something"
             placeholderTextColor="grey"
             numberOfLines={5}
             multiline={true}
           />
         </View>
-        <TouchableOpacity>
-          <Buttons name="Submit" />
-        </TouchableOpacity>
+        <Buttons name="Submit" />
       </SafeAreaView>
     );
   }
@@ -36,9 +26,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 23,
     fontWeight: '600',
-    marginLeft: 30,
-    marginRight: 30,
-    marginTop: 30,
+    marginLeft: '5%',
+    marginRight: '5%',
+    marginTop: '8%',
   },
   textAreaContainer: {
     borderColor: '#979797',

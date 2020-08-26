@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Toll from '../Assets/Icon/toll.svg';
 Icon.loadFont();
@@ -9,7 +9,7 @@ function Reservation() {
     <SafeAreaView style={styles.SafeAreaView}>
       <Text style={styles.heading}>My Reserved Items</Text>
       <ScrollView>
-        <TouchableOpacity>
+        <TouchableHighlight>
           <View style={styles.listRow}>
             <View style={styles.innerListView}>
               <View style={styles.ListView}>
@@ -35,7 +35,7 @@ function Reservation() {
               </View>
             </View>
           </View>
-        </TouchableOpacity>
+        </TouchableHighlight>
       </ScrollView>
     </SafeAreaView>
   );

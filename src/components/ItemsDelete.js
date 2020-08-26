@@ -94,6 +94,7 @@ export class ItemsDelete extends Component {
             <View style={styles.centeredView}>
               <View style={styles.modalView}>
                 <TouchableHighlight
+                  underlayColor="white"
                   onPress={() => {
                     this.setModalVisible(!modalVisible);
                   }}>
@@ -110,7 +111,7 @@ export class ItemsDelete extends Component {
                   from your reserve list
                 </Text>
                 <Buttons
-                  name="Go to  Reservation"
+                  name="Go to Reservation"
                   onPress={() =>
                     navigation.navigate('Reservation', {name: 'Reservation'})
                   }

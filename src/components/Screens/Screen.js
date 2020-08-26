@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {View, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, TouchableHighlight, StyleSheet} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -22,11 +22,11 @@ const NavigationDrawerStructure = (props) => {
   };
 
   return (
-    <TouchableOpacity onPress={() => toggleDrawer()}>
+    <TouchableHighlight underlayColor="white" onPress={() => toggleDrawer()}>
       <View style={styles.barsViews}>
         <Bars />
       </View>
-    </TouchableOpacity>
+    </TouchableHighlight>
   );
 };
 

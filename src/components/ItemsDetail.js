@@ -3,9 +3,16 @@ import Heart from '../Assets/Heart/Heart.svg';
 // import Toll from '../Assets/Icon/toll.svg';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {StyleSheet, Text, View, SafeAreaView, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  TouchableNativeFeedback,
+} from 'react-native';
 import Buttons from './Buttons';
-import {TouchableOpacity, ScrollView} from 'react-native-gesture-handler';
+import {TouchableHighlight, ScrollView} from 'react-native-gesture-handler';
 import Notification from './Notification';
 export class ItemsDetail extends Component {
   constructor(props) {
@@ -79,28 +86,42 @@ export class ItemsDetail extends Component {
                 <Text>$200</Text>
               </View>
               <View style={styles.icons}>
-                <TouchableOpacity onPress={() => this.Decrement()}>
-                  <View style={styles.plus}>
-                    <Icon name="minus" />
-                  </View>
-                </TouchableOpacity>
+                <TouchableHighlight
+                  underlayColor="white"
+                  onPress={() => this.Decrement()}>
+                  <TouchableNativeFeedback onPress={() => this.Increment()}>
+                    <View style={styles.plus}>
+                      <Icon name="minus" />
+                    </View>
+                  </TouchableNativeFeedback>
+                </TouchableHighlight>
+
                 <Text style={styles.counter}>{this.state.count}</Text>
 
-                <TouchableOpacity onPress={() => this.Increment()}>
-                  <View style={styles.plus}>
-                    <Icon name="plus" />
-                  </View>
-                </TouchableOpacity>
+                <TouchableHighlight
+                  underlayColor="white"
+                  onPress={() => this.Increment()}>
+                  <TouchableNativeFeedback onPress={() => this.Increment()}>
+                    <View style={styles.plus}>
+                      <Icon name="plus" />
+                    </View>
+                  </TouchableNativeFeedback>
+                </TouchableHighlight>
               </View>
               <View style={styles.cartView}>
-                <TouchableOpacity style={styles.addToCartView}>
+                <TouchableHighlight
+                  underlayColor="white"
+                  style={styles.addToCartView}>
                   <View style={styles.addToCart}>
                     <Text style={styles.CheckOutText}>Add To Cart</Text>
                   </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.addToCartView}>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  underlayColor="white"
+                  style={styles.addToCartView}>
                   <View style={styles.checkOut}>
-                    <TouchableOpacity
+                    <TouchableHighlight
+                      underlayColor="white"
                       onPress={() =>
                         this.props.navigation.navigate('Notification', {
                           name: 'Notification',
@@ -115,9 +136,9 @@ export class ItemsDetail extends Component {
                         }>
                         Check Out
                       </Text>
-                    </TouchableOpacity>
+                    </TouchableHighlight>
                   </View>
-                </TouchableOpacity>
+                </TouchableHighlight>
               </View>
             </View>
             <View style={styles.CancelView}>

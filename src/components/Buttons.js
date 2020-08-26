@@ -1,10 +1,13 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {Text, TouchableHighlight, StyleSheet, Button} from 'react-native';
 function Buttons(props) {
   return (
-    <TouchableOpacity style={styles.button} onPress={props.onPress}>
+    <TouchableHighlight
+      underlayColor="white"
+      style={styles.button}
+      onPress={props.onPress}>
       <Text style={styles.buttonText}>{props.name}</Text>
-    </TouchableOpacity>
+    </TouchableHighlight>
   );
 }
 const styles = StyleSheet.create({

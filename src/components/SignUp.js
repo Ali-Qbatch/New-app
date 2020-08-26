@@ -16,7 +16,10 @@ function SignUp({navigation}) {
       <Inputs placeholder="Full Name" />
       <Inputs placeholder="Email" />
       <Inputs placeholder="Password" />
-      <Buttons name="Sign Up" />
+      <Buttons
+        name="Sign Up"
+        onPress={() => navigation.navigate('SignIn', {name: 'SignIn'})}
+      />
       <View style={styles.AccountLink}>
         <Text style={styles.Account}>{Account}</Text>
         <Text

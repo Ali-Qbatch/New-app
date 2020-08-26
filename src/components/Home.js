@@ -7,7 +7,7 @@ import {
   Image,
   TextInput,
   ScrollView,
-  TouchableOpacity,
+  TouchableHighlight,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Row, Column as Col} from 'react-native-responsive-grid';
@@ -20,22 +20,21 @@ function Home({navigation}) {
       <View style={styles.View}>
         <View style={styles.InnerView}>
           <View style={styles.searchView}>
-            <TextInput
-              placeholder="Search Item"
-              style={styles.searchInput}></TextInput>
-            <Icon style={styles.searchIcon} name="search"></Icon>
+            <TextInput placeholder="Search Item" style={styles.searchInput} />
+            <Icon style={styles.searchIcon} name="search" />
           </View>
-          <TouchableOpacity>
+          <TouchableHighlight underlayColor="white">
             <View style={styles.menuView}>
               <Bars />
             </View>
-          </TouchableOpacity>
+          </TouchableHighlight>
         </View>
         <Text style={styles.heading}>Super Discount Detail</Text>
         <ScrollView style={styles.ScrollView}>
           <Row>
             <Col smSize={50} mdSize={50} lgSize={25}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {name: 'ItemsDetail'})
                 }>
@@ -54,10 +53,11 @@ function Home({navigation}) {
                     <Text style={styles.badge}>30% OFF</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
             <Col smSize={50} mdSize={50} lgSize={25}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {name: 'ItemsDetail'})
                 }>
@@ -75,10 +75,11 @@ function Home({navigation}) {
                     <Text style={styles.bag}>per item</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
             <Col smSize={50} mdSize={50} lgSize={25}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {name: 'ItemsDetail'})
                 }>
@@ -97,10 +98,11 @@ function Home({navigation}) {
                     <Text style={styles.badge}>30% OFF</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
             <Col smSize={50} mdSize={50} lgSize={25}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {
                     name: 'ItemsDetail',
@@ -121,10 +123,11 @@ function Home({navigation}) {
                     <Text style={styles.bag}>per bag</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
             <Col smSize={50} mdSize={50} lgSize={50}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {name: 'ItemsDetail'})
                 }>
@@ -143,10 +146,11 @@ function Home({navigation}) {
                     <Text style={styles.badge}>30% OFF</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
             <Col smSize={50} mdSize={50} lgSize={25}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {name: 'ItemsDetail'})
                 }>
@@ -167,10 +171,11 @@ function Home({navigation}) {
               </Text> */}
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
             <Col smSize={50} mdSize={50} lgSize={25}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {name: 'ItemsDetail'})
                 }>
@@ -189,10 +194,11 @@ function Home({navigation}) {
                     <Text style={styles.badge}>30% OFF</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
             <Col smSize={50} mdSize={50} lgSize={25}>
-              <TouchableOpacity
+              <TouchableHighlight
+                underlayColor="white"
                 onPress={() =>
                   navigation.navigate('ItemsDetail', {name: 'ItemsDetail'})
                 }>
@@ -211,7 +217,7 @@ function Home({navigation}) {
                     <Text style={styles.badge}>30% OFF</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </TouchableHighlight>
             </Col>
           </Row>
         </ScrollView>
